@@ -126,7 +126,7 @@ XMC.prototype.close = function () {
 };
 XMC.prototype.delegateClick = function () {
     var mf = this;
-    window.addEventListener('click', function () {
+    window.addEventListener('click', function (event) {
            if(event.target.hasAttribute(mf.selector) && event.target.getAttribute(mf.selector) === mf.selectorValue ){
                mf.show();
                mf.delegateClose();
